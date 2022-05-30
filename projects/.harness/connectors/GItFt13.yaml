@@ -1,0 +1,24 @@
+connector:
+  name: GItFt13
+  identifier: GItFt13
+  description:
+  orgIdentifier: default
+  projectIdentifier: GitFt13
+  type: Github
+  spec:
+    url: https://github.com/VikasChowdary/GitFt13
+    authentication:
+      type: Http
+      spec:
+        type: UsernameToken
+        spec:
+          username: Vikas
+          tokenRef: account.patForGithub
+    apiAccess:
+      type: Token
+      spec:
+        tokenRef: account.patForGithub
+    delegateSelectors:
+    - acctgroup
+    executeOnDelegate: true
+    type: Repo
